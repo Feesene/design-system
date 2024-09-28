@@ -1,0 +1,11 @@
+.storybook/
+src/
+storybook/
+.editorconfig
+.eslintrc.js
+.gitignore
+.prettierrc.json
+postcss.config.js
+tailwind.config.js
+tsconfig.json
+build-storybook/

@@ -1,0 +1,51 @@
+import { Meta, Source } from "@storybook/blocks";
+import { ChartExample } from "./components/ChartExample";
+
+<Meta title="Charts/How to use" />
+
+{/* AT EM tsconfig "moduleResolution": "bundler", */}
+
+## Charts
+
+Para visualizar mais exemplos [clique aqui](https://apexcharts.com/react-chart-demos/)
+
+<ChartExample />
+
+<Source
+  code={`
+import { AreaChart, IChartDataProps } from "@design-system/charts";
+
+const App = () => {
+const [series] = useState<IChartDataProps[] | undefined>([
+{ name: "Desktops", data: [10, 41, 35, 51, 49, 62, 69, 91, 148] },
+{ name: "PC", data: [41, 35, 51, 49, 62, 69, 91, 148, 10] },
+{ name: "Geladeiras", data: [60, 70, 20, 10, 16, 30, 40, 60, 80] },
+]);
+
+return <AreaChart data={series} xAxis={["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set"]} {...props} />
+
+}
+
+`}
+  language="tsx"
+  type="auto"
+  dark
+/>
+
+### <i>NEXT JS</i>
+
+Para integrar o componente de gráfico de área em uma aplicação Next.js, utilize a função dynamic para carregar o componente de forma assíncrona. Isso é especialmente útil quando o componente não precisa ser renderizado no lado do servidor (SSR).
+
+<Source
+  code={`
+import dynamic from "next/dynamic";
+
+const AreaChart = dynamic(() => import("@design-system/charts").then((value) => value.AreaChart), { ssr: false });
+
+`}
+  language="tsx"
+  type="auto"
+  dark
+/>
+
+`ssr: false` desativa o carregamento do componente no lado do servidor, tornando-o exclusivamente client-side. Isso é útil quando o componente depende de recursos que não estão disponíveis no servidor.

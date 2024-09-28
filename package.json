@@ -1,0 +1,104 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "React lib components",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./charts": {
+      "require": "./dist/charts/index.js",
+      "import": "./dist/charts/index.js",
+      "types": "./dist/charts/index.d.ts"
+    },
+    "./colors": {
+      "require": "./dist/colors.js",
+      "import": "./dist/colors.js",
+      "types": "./dist/colors.d.ts"
+    }
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Feesene/design-system.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsup",
+    "storybook": "storybook dev -p 6007",
+    "build:storybook": "storybook build -o storybook build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@internationalized/date": "^3.5.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@react-aria/interactions": "^3.22.1",
+    "@react-aria/utils": "^3.25.1",
+    "@storybook/test": "^8.3.0",
+    "@tanstack/react-table": "^8.20.5",
+    "@turf/turf": "^7.1.0",
+    "apexcharts": "^3.53.0",
+    "date-fns": "^3.6.0",
+    "js-cookie": "^3.0.5",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
+    "mapbox-gl": "^3.6.0",
+    "next-themes": "^0.3.0",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-aria": "^3.34.1",
+    "react-aria-components": "^1.3.1",
+    "react-dom": "^18.2.0",
+    "react-focus-lock": "^2.12.1",
+    "react-icons": "^5.2.1",
+    "react-stately": "^3.27.1",
+    "sonner": "^1.5.0",
+    "svelte": "^4.2.15",
+    "tailwind-variants": "^0.2.1",
+    "tailwindcss-animated": "^1.0.1",
+    "tailwindcss-neumorphism": "^0.1.0",
+    "threebox-plugin": "^2.2.7"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.5.0",
+    "@mapbox/polyline": "^1.2.1",
+    "@storybook/addon-a11y": "^8.3.0",
+    "@storybook/addon-essentials": "^8.3.0",
+    "@storybook/addon-interactions": "^8.3.0",
+    "@storybook/addon-links": "^8.3.0",
+    "@storybook/addon-mdx-gfm": "^8.3.0",
+    "@storybook/addon-onboarding": "^8.3.0",
+    "@storybook/blocks": "^8.3.0",
+    "@storybook/manager-api": "^8.3.0",
+    "@storybook/preview-api": "^8.3.0",
+    "@storybook/react": "^8.3.0",
+    "@storybook/react-vite": "^8.3.0",
+    "@storybook/theming": "^8.3.0",
+    "@types/js-cookie": "^3.0.6",
+    "@types/mapbox__polyline": "^1.0.5",
+    "@types/mapbox-gl": "^3.1.0",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.17",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.52.0",
+    "eslint-kit": "^10.5.2",
+    "eslint-plugin-storybook": "^0.8.0",
+    "moment": "^2.30.1",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "rimraf": "^5.0.5",
+    "storybook": "^8.3.0",
+    "storybook-dark-mode": "4.0.1",
+    "tailwindcss": "^3.4.11",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

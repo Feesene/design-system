@@ -1,0 +1,97 @@
+import { Meta, Source, Canvas } from "@storybook/blocks";
+import HStack from "../elements/Layout/HStack";
+import Icon from "../elements/Media/Icon";
+
+<Meta title="Styles/Theme dark" />
+
+## Modo escuro
+
+### Usando o modo escuro
+
+Para habilitar o modo escuro, você pode apenas adicionar uma classe `dark`, no elemento body do seu projeto.
+
+<Source
+  code={`
+  <body class="dark">
+  {...}
+</body>
+`}
+  language="html"
+  type="auto"
+  dark
+/>
+
+### Usando ThemeProvider
+
+O Hooks do ThemeProvider, utiliza o estado theme para definir o tema do aplicativo. Ele salva em cookie o estado e modifica a classe da primeira tag `body` automaticamente.
+
+`Em index.tsx`
+
+<Source
+  code={`
+import { ThemeProvider } from "design-system";
+
+...render(
+
+<React.StrictMode>
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+</React.StrictMode>
+) ` } language="tsx" type="auto" dark />
+
+`No App.tsx`
+
+<Source
+  code={`
+import { useTheme } from "design-system";
+
+const { theme, changeTheme } = useTheme();
+`
+}
+language="tsx"
+type="auto"
+dark
+/>
+
+## Modo escuro no `NextJs`
+
+`Em index.tsx`
+
+<Source
+  code={`
+import { ThemeProvider } from "design-system";
+import { cookies } from "next/headers";
+
+const initialTheme = cookies().get("theme")?.value;
+
+...return(
+
+<ThemeProvider initialTheme={initialTheme}>
+  <App />
+</ThemeProvider>
+)` } language="tsx" type="auto" dark />
+
+`No App.tsx`
+
+<Source
+  code={`
+import { useTheme } from "design-system";
+
+const { theme, changeTheme } = useTheme();
+`
+}
+language="tsx"
+type="auto"
+dark
+/>
+
+### Testando no storybook
+
+Para alternar entre modo escuro e modo claro, é preciso clicar no icone ( descrito abaixo ) na barra de ferramentas acima.
+
+<HStack bg="background" justifyContent="center" alignItems="center" className="h-16">
+  <Icon name="PiSun" className="text-dark-100" />
+  <Icon name="PiMoon" color="light" />
+</HStack>
+

@@ -1,0 +1,37 @@
+import { Meta, Source } from "@storybook/blocks";
+
+<Meta title="Styles/How to use" />
+
+## Javascript
+
+<Source
+  code={`
+import colors from "design-system/colors";
+`}
+  language="tsx"
+  type="auto"
+  dark
+/>
+
+## Tailwind
+
+Tailwind é um framework de desenvolvimento front-end que simplifica o processo de criação de interfaces de usuário.A abordagem principal do Tailwind é baseada em classes CSS utilitárias. Em vez de escrever seu próprio CSS do zero, você utiliza essas classes diretamente no seu HTML para aplicar estilos.
+
+[Documentação tailwind](https://tailwindcss.com/docs/installation)
+
+Em `tailwind.config.js` :
+
+<Source
+  code={`
+const config = {
+  theme: {
+    extend: {
+      colors: require("design-system/colors"),
+    },
+  },
+};
+`}
+  language="tsx"
+  type="auto"
+  dark
+/>

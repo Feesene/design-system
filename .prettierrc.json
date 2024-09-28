@@ -1,0 +1,15 @@
+{
+  "printWidth": 120,
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ],
+  "tailwindAttributes": [
+    "class",
+    "className",
+    "classNames"
+  ],
+  "tailwindFunctions": [
+    "clsx",
+    "tv"
+  ]
+}
