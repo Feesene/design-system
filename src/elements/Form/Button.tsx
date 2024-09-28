@@ -1,5 +1,6 @@
 "use client";
 
+import "../../index.css"
 import React, { useImperativeHandle } from "react";
 import { useButton, AriaButtonProps, useFocusRing, mergeProps } from "react-aria";
 import { tv } from "tailwind-variants";
