@@ -1,0 +1,34 @@
+.light {
+  background-color: #f7f7f7;
+  /* background-color: #fff; */
+}
+
+td .docblock-argstable-body {
+  background-color: #f7f7f7 !important;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  /* background-color: #262626; */
+}
+
+.docs-story {
+  background-color: #fff !important;
+}
+
+.dark .docs-story {
+  background-color: #262626 !important;
+}
+
+.dark .docblock-typeset {
+  color: #fff;
+}
+
+.sbdocs h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat Flex" !important;
+}
